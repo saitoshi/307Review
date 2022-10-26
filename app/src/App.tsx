@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, CSSProperties } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Landing from './pages/Landing';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,21 +17,18 @@ function App() {
     };
   }, []);
 
+  const appStyle: CSSProperties = {
+    width: width,
+    maxWidth: width,
+  };
+
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+    <div style={appStyle}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Landing />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

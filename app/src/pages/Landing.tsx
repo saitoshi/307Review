@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Card } from 'react-bootstrap';
+import { Container, Card, CardGroup } from 'react-bootstrap';
 function Landing() {
   return (
     <>
@@ -28,14 +28,37 @@ function Landing() {
       </div>
       <Container fluid style={{ textAlign: 'center' }}>
         <div className='mainBody'>
-          <Card style={{ width: '20wv' }}>
-            <Card.Header as='h4'>MATRIX FOUNDATION</Card.Header>
-            <Card.Body>
-              Review basic matrix operation such as row reducing or finding the
-              inverse of a given matrix.
-            </Card.Body>
-          </Card>
-        </div>
+          <h3>MATRIX FOUNDATION</h3>
+          <p>
+            Review basic matrix operation such as row reducing or finding the
+            inverse of a given matrix.
+          </p>
+
+          <CardGroup style={{ fontSize: '12px' }}>
+            <Card>
+              <Card.Header as='h5'>OPERATIONS</Card.Header>
+              <Card.Body>
+                Review basic matrix operation such as row reducing or finding
+                the inverse of a given matrix.
+              </Card.Body>
+            </Card>
+            &nbsp;
+            <Card>
+              <Card.Header as='h5'>ROW REDUCING</Card.Header>
+              <Card.Body>Review how to row reduce the given matrix.</Card.Body>
+            </Card>
+            &nbsp;
+            <Card>
+              <Card.Header as='h5'>DETERMINANT</Card.Header>
+              <Card.Body>
+                Review basic matrix operation such as row reducing or finding
+                the inverse of a given matrix.
+              </Card.Body>
+            </Card>
+          </CardGroup>
+              <h3></h3>
+              </div>
+              
       </Container>
     </>
   );
